@@ -1,0 +1,236 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  min-height: 620px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #08060f;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      1100px 640px at 74% 36%,
+      rgba(92, 66, 190, 0.2),
+      transparent 64%
+    ),
+    radial-gradient(
+      900px 560px at 12% 88%,
+      rgba(38, 96, 168, 0.12),
+      transparent 62%
+    ),
+    radial-gradient(
+      560px 380px at 90% 82%,
+      rgba(130, 74, 198, 0.1),
+      transparent 68%
+    ),
+    linear-gradient(180deg, #0c0919 0%, #08060f 100%);
+  will-change: transform;
+}
+
+.heroCanvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.heroVeil {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: #08060f;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 0 7vw;
+  max-width: 980px;
+  pointer-events: none;
+}
+
+.content > * {
+  pointer-events: auto;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #9d91e6;
+}
+
+.eyebrowDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #c3abff;
+  box-shadow: 0 0 12px rgba(195, 171, 255, 0.9);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(3.2rem, 9.5vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  color: #f5f2ff;
+  text-shadow: 0 0 60px rgba(8, 6, 15, 0.85);
+}
+
+.line {
+  display: block;
+  overflow: hidden;
+}
+
+.line > span {
+  display: block;
+  will-change: transform;
+}
+
+.titleAccent {
+  background: linear-gradient(105deg, #c3abff 0%, #7fd4ff 55%, #ffca8a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sub {
+  margin: 0;
+  max-width: 46ch;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.72;
+  color: #bfb6e0;
+}
+
+.cta {
+  margin-top: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.9rem;
+  border-radius: 999px;
+  background: rgba(245, 242, 255, 0.95);
+  color: #0b0817;
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 40px rgba(20, 12, 50, 0.55);
+  transition:
+    box-shadow 0.35s ease,
+    filter 0.35s ease,
+    background 0.35s ease;
+}
+
+.cta:hover {
+  background: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(195, 171, 255, 0.55),
+    0 14px 48px rgba(150, 120, 255, 0.42);
+}
+
+.ctaArrow {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+.scroll {
+  position: absolute;
+  left: 7vw;
+  bottom: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #6f639e;
+}
+
+.scrollLabel {
+  pointer-events: none;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 46px;
+  background: linear-gradient(to bottom, #a390e8, transparent);
+  transform-origin: top;
+  animation: hero-scroll 2s ease-in-out infinite;
+}
+
+@keyframes hero-scroll {
+  0%,
+  100% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .heroBg {
+    background:
+      radial-gradient(
+        95% 62% at 50% 42%,
+        rgba(92, 66, 190, 0.22),
+        transparent 66%
+      ),
+      linear-gradient(180deg, #0c0919 0%, #08060f 100%);
+  }
+
+  .content {
+    padding: 0 6vw;
+  }
+
+  .title {
+    font-size: clamp(2.7rem, 14vw, 4.4rem);
+  }
+
+  .sub {
+    max-width: 38ch;
+  }
+
+  .scroll {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollLine {
+    animation: none;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  .cta,
+  .ctaArrow {
+    transition-duration: 0.01s;
+  }
+}
