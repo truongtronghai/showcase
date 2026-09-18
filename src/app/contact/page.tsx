@@ -9,17 +9,17 @@ export const metadata: Metadata = {
     "Get in touch — email and social profiles for the developer behind this portfolio.",
 };
 
-const contactEmail = "hello@example.com";
+const contactEmail = "truongtronghai@gmail.com";
 
 const socialLinks = [
   {
     label: "GitHub",
-    href: "https://github.com/example",
+    href: "https://github.com/truongtronghai",
     icon: Code,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/example",
+    href: "https://www.linkedin.com/in/truongtronghai/",
     icon: Briefcase,
   },
 ];

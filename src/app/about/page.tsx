@@ -17,15 +17,52 @@ export const metadata: Metadata = {
 const skillGroups = [
   {
     label: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    skills: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCn",
+      "Ant Design",
+      "Headless CMS",
+      "Responsive Design",
+      "Accessibility",
+      "Hugo",
+      "Web Performance Optimization",
+      "SEO",
+      "Charts & Data Visualization",
+    ],
   },
   {
     label: "Backend",
-    skills: ["Node.js", "PostgreSQL", "Redis", "REST APIs"],
+    skills: [
+      "Node.js",
+      "FastAPI",
+      "PostgreSQL",
+      "Websocket",
+      "REST APIs",
+      "GraphQL",
+      "Serverless Functions",
+      "Cloudflare Workers",
+      "Webhooks",
+      "Authentication & Authorization",
+      "AWS Cognito",
+      "Stripe API",
+    ],
   },
   {
     label: "Tools & Practices",
-    skills: ["Git", "CI/CD", "Testing", "Accessibility"],
+    skills: [
+      "AI Augmented",
+      "SDD - Spec-driven development",
+      "TDD - Test-driven development",
+      "Git",
+      "CI/CD",
+      "Testing",
+      "Clean code",
+      "Agile methodology",
+      "Accessibility",
+    ],
   },
 ];
 
@@ -41,16 +78,24 @@ export default function AboutPage() {
       <div className="mt-8 flex flex-col gap-8">
         <section className="max-w-2xl">
           <p className="text-lg leading-relaxed">
-            I am a developer focused on the web — from product dashboards to
-            client storefronts. I care about clean interfaces, well-structured
-            code, and shipping work that holds up in production.
+            I am a software engineer focused on the web — from landing pages,
+            product dashboards to client SaaS platforms. I care about clean
+            interfaces, well-structured code, and shipping work that holds up in
+            production.
+          </p>
+          <p className="text-muted-foreground mt-4 leading-relaxed">
+            I focused on FE. However, I can also work on both FE and BE sides
+            and fullstack as well. I have experience in building web
+            applications, integrating with third-party APIs, and deploying to
+            cloud platforms. I enjoy working on projects that require both
+            technical skills and creative problem-solving.
           </p>
           <p className="text-muted-foreground mt-4 leading-relaxed">
             Over the years I have worked on analytics platforms, e-commerce
-            build-outs, and freelance contracts where requirements and timelines
-            were as important as the code itself. This portfolio collects
-            selected work across both web applications and freelance
-            engagements.
+            build-outs, CMS, and freelance contracts where requirements and
+            timelines were as important as the code itself. This portfolio
+            collects selected personal work across both web applications and
+            freelance engagements.
           </p>
         </section>
         <section>

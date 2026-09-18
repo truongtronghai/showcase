@@ -4,17 +4,17 @@ import { Code, Briefcase, Mail } from "lucide-react";
 const footerLinks = [
   {
     label: "GitHub",
-    href: "https://github.com/example",
+    href: "https://github.com/truongtronghai",
     icon: Code,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/example",
+    href: "https://www.linkedin.com/in/truongtronghai/",
     icon: Briefcase,
   },
   {
     label: "Email",
-    href: "mailto:hello@example.com",
+    href: "mailto:truongtronghai@gmail.com",
     icon: Mail,
   },
 ];
